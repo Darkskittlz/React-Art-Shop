@@ -1,0 +1,9 @@
+.react-slideshow-container {
+    width: 420px;
+
+    @media only screen and (max-width: 380px) {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+}
