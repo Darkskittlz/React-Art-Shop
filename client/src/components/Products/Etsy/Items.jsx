@@ -6,6 +6,7 @@ import { StorefrontSharp } from '@material-ui/icons';
 import Grid from '@material-ui/core/Grid';
 import useStyles from './styles';
 
+
 const slideImages = [
   {
     url: require('./images/mug.png'),
@@ -25,7 +26,7 @@ const Items = () => {
   };
 
   return (
-    <Card className={classes.root}>
+    <Card id="slideContainer" className={classes.root}>
       <Grid className={classes.slideContainer}>
         <Slide autoplay={autoplay} {...properties}>
           {slideImages.map((slideImage, index) => (

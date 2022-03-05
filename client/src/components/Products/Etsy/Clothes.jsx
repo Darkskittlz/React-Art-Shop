@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardActions, Typography, IconButton } from '@material-ui/core';
-import {  StorefrontSharp } from '@material-ui/icons';
+import { StorefrontSharp } from '@material-ui/icons';
 import useStyles from './styles';
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
@@ -37,7 +37,7 @@ const Clothes = () => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card id="slideContainer" className={classes.root}>
       <Grid className={classes.slideContainer}>
         <Slide>
           {slideImages.map((slideImage, index) => (

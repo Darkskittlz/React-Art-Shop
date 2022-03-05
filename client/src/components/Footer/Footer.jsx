@@ -7,30 +7,34 @@ import { Button } from 'reactstrap';
 // import { BottomNavigation } from '@mui/material';
 import React from 'react';
 import {
-  Box,
-  Container
+  Box
 } from "./FooterStyles";
 
 
 const Left = styled.div`
-    flex: 1;  
+    flex: 1.5;  
     display: flex;
     margin-top: 10px;
     margin-left: 10px;
+    justify-content: space-between;
     flex-direction: column;
     //Makes flex container display vertically as opposed to the :default, :horizontal. 
 `;
 
 const Logo = styled.h1`
+  font-size: 45px;
     ${mobile({ textAlign: 'center', marginTop: '5px' })}
 `;
 const Desc = styled.p`
     margin: 20px 0px;
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: 600;
+
 `;
 const SocialContainer = styled.div`
     display: flex;
-    ${mobile({ justifyContent: 'center' })}
+    margin-bottom: 10px;
+    ${mobile({ justifyContent: 'center', marginBottom: '10px' })}
 
 `;
 const SocialIcon = styled.div`
@@ -44,17 +48,20 @@ const SocialIcon = styled.div`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 `;
 
 const Right = styled.div`
     flex: 1;   
     padding: 0px;
-    ${mobile({ backgroundColor: '#ebe8e8' })}
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    ${mobile({ backdropFilter: 'blur(10px)' })}
 `;
 
 const Center = styled.div`
-    flex: 0.3;   
+    flex: 1;   
     padding: 40px;
     margin-top: -40px;
     ${mobile({ display: 'none' })}
@@ -80,14 +87,24 @@ const List = styled.ul`
 const ContactItem = styled.div`
     margin-bottom: 20px;
     display: flex;
-    align-items: center;
     ${mobile({ justifyContent: 'center', fontSize: '20px' })}
 `;
 
 const Payment = styled.img`
-    width: 60%;
-    ${mobile({ width: '100%', justifyContent: 'center', display: 'flex' })};
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  ${mobile({ justifyContent: 'center', display: 'flex' })};
 `;
+
+const PaymentContainer = styled.div`
+  width: 100%;
+  padding-bottom: 5px;
+  ${mobile({ backdropFilter: 'blur(10px)', width: '100%', justifyContent: 'center', display: 'flex' })};
+`
+
 
 
 
@@ -98,7 +115,7 @@ const Footer = () => {
         <Logo>DarkMeow Productions</Logo>
         <Desc>
           <p>
-            Dark Meow is founded by Dark Skittles and Devin Meow.
+            DarkMeow is founded by Darkskittles and Devin Meow.
             A couple madly in love, who have combined their skills of artistry and
             programming to bring you Dark Meow Productions. Here you’ll find Art,
             Merch, and NFT’s for sale, hand created in house. Our mission is to bring art,
@@ -143,7 +160,9 @@ const Footer = () => {
         <ContactItem>
           <MailOutline style={{ marginRight: '10px' }} />Devin.Meowz@gmail.com
         </ContactItem>
-        <Payment src="https://sep.yimg.com/ca/I/yhst-172622206-1_2636_1275986089" />
+        <PaymentContainer>
+          <Payment src="https://sep.yimg.com/ca/I/yhst-172622206-1_2636_1275986089" />
+        </PaymentContainer>
       </Right>
     </Box>
   );

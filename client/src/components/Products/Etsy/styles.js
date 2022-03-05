@@ -6,13 +6,14 @@ export default makeStyles(() => ({
     zIndex: 999,
     maxWidth: 515,
     maxHeight: 740,
-    marginLeft: 10,
+    marginLeft: 5,
     justifyContent: "center",
+    marginBottom: 10,
   },
   media: {
     zIndex: 999,
     height: 200,
-    width: '20vw',
+    width: '15vw',
     paddingTop: "56.25%", // 16:9
   },
   cardActions: {
@@ -24,11 +25,12 @@ export default makeStyles(() => ({
     zIndex: 999,
     display: "flex",
     width: '100%',
-    height: '100px',
+    height: '70px',
     justifyContent: "center",
   },
   slideContainer: {
     zIndex: 999,
+    height: 400,
     justifyContent: "center",
   },
   image: {

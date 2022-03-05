@@ -3,14 +3,15 @@ import styled from 'styled-components';
 export const Box = styled.div`
 backdrop-filter: blur(10px);
 bottom: 0;
-left: 0;
 display: flex;
 width: 100%;
 margin-top: 180px;
 
 
 @media (max-width: 1000px) {
-	padding: 70px 30px;
+	margin-top: 20px;
+	left: -20px;
+	flex-direction: column;
 }
 `;
 

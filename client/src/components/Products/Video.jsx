@@ -9,6 +9,13 @@ const GridContainer = styled.div`
     position: fixed;
     left: 0;
     top: 0;
+
+    @media only screen and (max-width: 380px) {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
 `
 
 

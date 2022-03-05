@@ -31,8 +31,8 @@ const Items = () => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <Grid className={classes.slideContainer}>
+    <Card id="slideContainer" className={classes.root}>
+      <Grid  className={classes.slideContainer}>
         <Fade>
           {fadeImages.map((fadeImage, index) => (
             <div className="each-fade" key={index}>

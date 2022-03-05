@@ -37,6 +37,12 @@ const ContentContainer = styled.div`
     margin-top: 30px;
     margin-bottom: 40px;
   }
+
+  @media only screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
 `
 
 const TitleContainer = styled.div`
@@ -89,7 +95,7 @@ const Products = ({ products, onAddToCart }) => {
           </TitleContainer>
           <Grid container justify="center" spacing={4}>
             {products.map((product) => (
-              <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
+              <Grid key={product.id} item xs={10} sm={6} md={4} lg={3}>
                 <Product product={product} onAddToCart={onAddToCart} />
               </Grid>
             ))}
