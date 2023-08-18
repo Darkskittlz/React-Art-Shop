@@ -86,7 +86,6 @@ const Products = ({ products, onAddToCart }) => {
         </TitleContainer>
         <Grid container justify="center" spacing={2}>
           <Clothes />
-          <Items />
           <Accessories />
         </Grid>
         <GridContainer>
